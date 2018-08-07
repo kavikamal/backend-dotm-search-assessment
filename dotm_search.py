@@ -16,8 +16,8 @@ def main():
         print 'Please enter search text'
         sys.exit(1)
     search_text = sys.argv[1] 
-    if len(sys.argv)==3:
-        directory = sys.argv[2]
+    if len(sys.argv)>3 and sys.argv[2]=="--dir":
+        directory = sys.argv[3]
     else:    
         directory = os.getcwd()  
     searchFile(search_text,directory)
